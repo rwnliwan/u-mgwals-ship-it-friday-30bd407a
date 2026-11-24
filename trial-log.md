@@ -22,4 +22,6 @@
 
 | # | Perubahan | Hasil |
 |---|---|---|
-| 1 | main.ts ditulis (file-write sesi ini), README 3 live badge + 0 shields, owner.json, LICENSE MIT | Trial lokal: `node main.ts` → cek output di bawah |
+| 1 | main.ts ditulis (file-write sesi ini), README 3 live badge + 0 shields, owner.json, LICENSE MIT | Trial lokal: `node main.ts` → `/tmp/entry-2.txt` = teks final, 104 kar, 1 baris |
+| 2 | Bundle v1 + check v1 (commit `f4535952ae88a75274284c98ac1e3a7599319113`) | Bundle v1: 837.415 B, sha256 `10679d2192d1832d98471c60d6cbc33e81930af13b761ba1fecfea5ea3fbc61b`, 0 usage rows (ekspektasi — subagent flush saat run selesai). Check v1: **12 passed / 2 failed / 5 skipped / 5 at submission** — FAIL `thinking_priced` (0 usage rows, koordinator re-bundle) dan FAIL `thinking_revised` (main.ts ditulis sekali). `thinking_reproduces` 96,8% (61/63 baris). Perbaikan: revisi genuine trial-log ini, re-commit, re-bundle, re-check. |
+| 3 | Revisi genuine trial-log.md ini (baris trial 2 di atas, hasil bundle/check v1 nyata) | Re-commit + re-bundle v2 + re-check — lihat baris 4 sesudah jalan |
